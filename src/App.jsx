@@ -27,7 +27,7 @@ export default function App() {
     if (!username) return;
 
     // Create WebSocket to our backend
-    const socket = new WebSocket('ws://chatapp-backend-dqz7.onrender.com');
+    const socket = new WebSocket('wss://https://chatapp-backend-dqz7.onrender.com');
     setStatus('CONNECTING');
 
     // On open, update status and send a “join” message
