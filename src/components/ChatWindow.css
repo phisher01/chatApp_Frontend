@@ -1,0 +1,148 @@
+/* ChatWindow.css */
+
+.message {
+  max-width: 70%;
+  word-break: break-word; /* Ensures long words break within the bubble */
+}
+
+/* 1. Your own message bubbles */
+.message.own {
+  background-color: #98d3b4;
+  max-width: 400px !important;
+  margin-left: auto;
+  margin-right: 40px;
+  padding: 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right{
+    width: 100px;
+    
+   
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ 
+    display: flex;
+    justify-content: space-between;
+   
+    align-items: center;
+}
+
+/* 2. Others’ message bubbles */
+.message.other {
+    background-color: #d0e7ff;
+    margin-left: 40px;
+  max-width: 400px !important;
+  margin-right: auto;
+  padding: 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.message-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;   
+  width: 100%;
+}
+
+.message-body {
+  flex: 1 1 100%;
+  font-size: 0.95rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  margin-bottom: 0.25rem;
+}
+
+.message-meta {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: flex-end;  /* ✅ Force right alignment */
+  font-size: 0.75rem;
+  color: #555;
+}
+
+/* Input area container */
+.input-area {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding: 0.5rem;
+  border-top: 1px solid #ccc;
+  background: #fff;
+}
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.logout-btn {
+  font-size: 0.85rem;
+  padding: 0.25rem 0.75rem;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+/* Room label on the left of the input */
+.input-room-label {
+    flex: 0 0 auto;
+    margin-right: 0.75rem;
+    font-size: 0.9rem;
+    color: #555;
+    display: flex;
+  align-items: center;
+}
+
+/* Optionally style the emoji/icon a bit */
+.input-room-label span,
+.input-room-label img {
+    margin-right: 0.4rem;
+}
+
+/* Text input */
+.input-area input {
+  flex: 1 1 300px;         
+/* width: 100%;        */
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+
+/* Send button (no change) */
+.cw-send-btn {
+  flex: 0 0 auto;   
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  background-color: #2293df;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.2s, transform 0.1s;
+}
+.cw-send-btn:hover:not(:disabled) { background-color: #3378c3; }
+.cw-send-btn:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+  box-shadow: none;
+}
